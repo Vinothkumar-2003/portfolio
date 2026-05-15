@@ -17,6 +17,7 @@ const projects = [
     title: "KFC E-Commerce Website",
     tech: ["HTML", "CSS", "JavaScript"],
     desc: "A responsive KFC website with product listings, shopping cart, checkout with JS validations, CSS animations, and localStorage cart persistence.",
+    link: "https://kfc-vk.netlify.app/",
     icon: "🍗",
     color: "#e8272e",
   },
@@ -24,6 +25,7 @@ const projects = [
     title: "Banner Shop Website",
     tech: ["React Vite", "Bootstrap 5", "React Router", "WhatsApp API"],
     desc: "Print management SPA with custom size configurator (inches/feet), live price calculator, and WhatsApp API order integration with pre-filled order details.",
+    link: "https://vinoth-art-s-bannner.vercel.app",
     icon: "🖨️",
     color: "#00b4d8",
   },
@@ -531,7 +533,7 @@ export default function Portfolio() {
               <div style={{ fontSize: 48, marginBottom: 20 }}>{p.icon}</div>
               <h3 style={{ fontSize: 22, fontWeight: 800, marginBottom: 14, letterSpacing: "-0.5px" }}>{p.title}</h3>
               <p style={{ fontSize: 14, color: "rgba(232,234,240,0.55)", lineHeight: 1.8, marginBottom: 24 }}>{p.desc}</p>
-              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 24 }}>
                 {p.tech.map(t => (
                   <span key={t} style={{
                     padding: "4px 12px", borderRadius: 6,
@@ -540,6 +542,22 @@ export default function Portfolio() {
                   }}>{t}</span>
                 ))}
               </div>
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary-v"
+                style={{
+                  display: "inline-flex", alignItems: "center", justifyContent: "center",
+                  textDecoration: "none",
+                  background: "transparent", border: `1px solid ${p.color}`,
+                  color: p.color, padding: "10px 18px", borderRadius: 8,
+                  fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: 14,
+                  transition: "all 0.25s ease",
+                }}
+              >
+                View Project -&gt;
+              </a>
             </div>
           ))}
         </div>
@@ -620,6 +638,7 @@ export default function Portfolio() {
               {[
                 { icon: "📧", label: "Email", value: "vinotkum123@gmail.com", href: "mailto:vinotkum123@gmail.com" },
                 { icon: "📱", label: "Phone", value: "+91 63812 17533", href: "tel:+916381217533" },
+                { icon: "in", label: "LinkedIn", value: "vinoth-kumar-k", href: "https://www.linkedin.com/in/vinoth-kumar-k-0694322b6" },
                 { icon: "📍", label: "Location", value: "Chennai (Velachery), Tamil Nadu" },
               ].map(c => (
                 <div key={c.label} className="contact-row" style={{ display: "flex", alignItems: "center", gap: 16 }}>
